@@ -31,6 +31,7 @@ class CustomNavigatinBar extends StatelessWidget {
           label: "Cart",
           activeIcon: Icon(Icons.shopping_cart),
         ),
+
       ],
     );
   }
