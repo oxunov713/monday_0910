@@ -9,30 +9,35 @@ class CustomNavigatinBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      currentIndex: pageNum,
-      onTap: (value) => onPageChange(value),
-      landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
-      showSelectedLabels: true,
-      showUnselectedLabels: false,
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home_outlined),
-          label: "Home",
-          activeIcon: Icon(Icons.home),
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.favorite_outlined),
-          label: "Like",
-          activeIcon: Icon(Icons.favorite),
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart_outlined),
-          label: "Cart",
-          activeIcon: Icon(Icons.shopping_cart),
-        ),
-
-      ],
+    return BottomAppBar(
+      shape: CircularNotchedRectangle(),
+      notchMargin: 10,
+      clipBehavior: Clip.antiAlias,
+      surfaceTintColor: Colors.transparent,
+      child: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.home),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.favorite_outlined),
+                ),
+              ],
+            ),
+          ),
+          FloatingActionButton(
+            onPressed: () {},
+            child: Icon(Icons.add),
+          ),
+        ],
+      ),
     );
   }
 }

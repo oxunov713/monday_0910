@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
+      child: Scaffold(backgroundColor: Colors.red,
         body: PageView(
           controller: pageController,
           physics: BouncingScrollPhysics(),
@@ -51,7 +51,8 @@ class _HomePageState extends State<HomePage> {
           },
           pageNum: pageNum,
         ),
-        floatingActionButton: FloatingActionButton.large(
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
           onPressed: () {},
           child: Icon(Icons.ac_unit, color: Colors.lime),
         ),
